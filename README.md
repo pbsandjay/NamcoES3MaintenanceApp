@@ -200,6 +200,11 @@ By examining the scripts and their interaction with the registry, I investigated
 
 This was distinct from the earlier BIOS password recovery and from the FVEKs investigated during the DMA work. Each belonged to a different part of the system's security design.
 
+By adding a print statement after the BitLocker keys were obtained, I was able to determine the BitLocker passphrases for the following games;
+
+- `Tekken 7/Fated Retribution/Round 2: xVn4ZCvoH29Ck9Aw`
+- `Time Crisis 5: FHVH4oQ5LezzRyB4`
+
 ### What the investigation established
 
 The update workflow depended on more than simply inserting a USB drive. Its scripts, registry configuration, BitLocker-protected media, and virtual disk images worked together.
