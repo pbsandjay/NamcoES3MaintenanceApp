@@ -17,7 +17,7 @@ What began as an attempt to understand and regain access to an ES3 system evolve
 - [4. Accessing the Physical Drive from Linux](#4-accessing-the-physical-drive-from-linux)
 - [5. Offline Windows Registry Editing](#5-offline-windows-registry-editing)
 - [6. Investigating Update USB Drives](#6-investigating-update-usb-drives)
-- [7. From Research to a Maintenance Application](#7-from-research-to-a-maintenance-application)
+- [7. The ES3Maintenance Application](#7-the-es3maintenance-application)
 
 ## Project Overview
 
@@ -325,11 +325,11 @@ The objective is to make the platform easier to understand, troubleshoot, preser
 
 ## How to set up your USB drive, and use the tool (At your own risk!)
 
-!!!As of now, the only way to utilize this tool is by having the real update USB drive!!! (Update drives for Tekken 7 FR show up all the time on Yahoo Japan Auctions)
+#### !!!As of now, the only way to utilize this tool is by having the real update USB drive!!! (Update drives for Tekken 7 FR show up all the time on Yahoo Japan Auctions)
 
-Note: Update drives are compatible with other games, you just need to change the BitLocker passphrases to the other game's. 
+Note: Update drives are compatible with other games, you just need to change the BitLocker passphrases to suit the game's needed passphrase. 
 
-Unlocking a Time Crisis 5 update drive, and updating the passphrase with Tekken 7's will work.
+#### EXAMPLE: Unlocking a Time Crisis 5 update drive, and updating the passphrase with Tekken 7's will work.
 
 1. Download the latest release (PoC 0.2 or greater)
 2. Unzip the entire contents onto a safe place on your PC
@@ -340,3 +340,21 @@ Unlocking a Time Crisis 5 update drive, and updating the passphrase with Tekken 
 7. Turn on the ES3
 8. Let it continue through the normal booting process
 9. Once it sees the USB drive, it'll attempt to update the game. Instead of trying to find and copy the update VHD, it'll launch the ES3 Maintenance App
+
+## FAQ
+
+#### I changed the passphrase from Game A to Game B, now I can't unlock it/ES3 doesn't see the update drive!
+
+I hate to tell ya, but you dun goof'd, bud. Probably put a space at the beginning or the end of the passphrase when you copy/pasted it. If you can't unlock it by adding a space at the beginning and/or end, then that's a do over. Try to find another update drive for sale, and next time don't rush through things! 
+
+#### Why are these the only games that can use the tool?
+
+Technically, it can be used for ANY ES3 game. But in order to obtain the passphrase for other games, I would need the physical board. Maybe with enough luck, I can find a working one and be able to add support for it. 
+
+#### Is this a ES3 multi? 
+
+I mean, it can be. But I'll leave it up to you what you want to use this tool for! But it doesn't contain anything to be able to convert it to an ES3 multi. 
+
+#### Why can't I use a standard USB drive that I have stashed in my desk?
+
+That's something I'm currently looking into, but during my initial testing, it wouldn't load either the custom update.ps1 script or the ES3 app. So pretty safe to assume, for now, that it's looking for a specific USB VID/PID. 
