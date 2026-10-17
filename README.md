@@ -323,7 +323,7 @@ The objective is to make the platform easier to understand, troubleshoot, preser
 
 !!!As of now, the only way to utilize this tool is by having the real update USB drive!!!
 
-1. Download the latest release 
+1. Download the latest release (PoC 0.2 or greater)
 2. Unzip the entire contents onto a safe place on your PC
 3. Take your game's USB update drive, plug it in, and use one of the passwords above and unlock it
 4. MAKE A BACKUP OF THE CONTENTS OF THE DRIVE BEFORE OVERWRITING/DELETING FILES
