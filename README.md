@@ -318,3 +318,17 @@ Recovering BIOS access with a CH314A programmer opened the door to firmware inve
 The maintenance application brings that investigation toward a practical result: a dedicated interface for common maintenance tasks, informed by a deeper understanding of the ES3's hardware and software.
 
 The objective is to make the platform easier to understand, troubleshoot, preserve, and maintain.
+
+## How to set up your USB drive, and use the tool
+
+!!!As of now, the only way to utilize this tool is by having the real update USB drive!!!
+
+1. Download the latest release 
+2. Unzip the entire contents onto a safe place on your PC
+3. Take your game's USB update drive, plug it in, and use one of the passwords above and unlock it
+4. MAKE A BACKUP OF THE CONTENTS OF THE DRIVE BEFORE OVERWRITING/DELETING FILES
+5. Copy the contents of what you unzipped earlier and drop them onto the root of your USB drive
+6. Unplug the USB from your PC, and plug it into a powered-off ES3
+7. Turn on the ES3
+8. It'll continue through the normal booting process
+9. It'll look for an update, and instead of trying to find and copy the update VHD, it'll launch the ES3 Maintenance App
