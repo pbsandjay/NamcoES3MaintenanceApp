@@ -234,7 +234,11 @@ Scans the expected directory for virtual hard disk (`.vhd`) files and lists the 
 
 This is useful for identifying the virtual disks stored on the ES3, including disk images associated with its software environments. It provides a quick inventory without requiring the user to browse the filesystem manually.
 
-Listing a VHD does not mount it, unlock it, or modify its contents.
+Stored on the Windows partition on Tekken 7 drives lives a Namco-created tool to test, create, delete, or mount VHD image files, called ESx_Tool
+
+A copy of these files are included in release PoC 0.2 (and above), and should be placed in the root of the update USB drive.
+
+It'll first attempt to find, and load, the ESx_Tool inside the C:/scipts directory, if not, we'll load it from the root of the update USB drive.
 
 #### Open Explorer
 
