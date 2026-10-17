@@ -159,21 +159,19 @@ The relevant configuration was under:
 
 `Software\Microsoft\Windows NT\CurrentVersion\Winlogon`
 
-The `Shell` value was the setting of interest.
+### Obtaining the "shell"
 
-### Changing the shell
-
-For the test, the shell configuration was changed to point to:
+For the test, the shell configuration was added, and pointed to:
 
 `explorer.exe`
 
-After the modified hive was saved and unloaded, the updated `NTUSER.DAT` was copied back to the Windows installation, replacing the original file.
+After the modified hive was saved and unloaded, the updated `NTUSER.DAT` was copied back to the Windows installation partition, replacing the original file.
 
-When the drive was returned to the ES3 and the system was started, this change allowed the machine to load the Windows Explorer shell instead of following the previous shell behavior.
+When the drive was returned to the ES3 and the system was started, this change allowed the machine to load the Windows Explorer shell instead of booting the game directly.
 
 ### Why this mattered
 
-This was a significant turning point. Rather than relying solely on the original arcade startup path, I had a way to change the user's shell configuration offline and investigate the Windows environment more directly.
+This was a significant turning point. Rather than booting directly into the game, I had a way to change the user's shell configuration offline leading to be able to investigate the Windows environment more directly.
 
 It also demonstrated the value of offline registry editing as a recovery technique when a system is accessible at the filesystem level but difficult to maintain through its normal interface.
 
