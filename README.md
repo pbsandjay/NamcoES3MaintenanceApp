@@ -284,6 +284,10 @@ Because restarting interrupts active processes and can cause unsaved work to be 
 
 This is the main feature in the interface that intentionally causes a system-level change.
 
+#### ...Secret music cheat code easter egg? 👀
+
+Have fun! 😄
+
 ### Design Philosophy
 
 The application is intended to make routine diagnostics and maintenance more accessible while keeping potentially disruptive actions distinct from inspection tools.
