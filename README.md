@@ -206,33 +206,101 @@ The update workflow depended on more than simply inserting a USB drive. Its scri
 
 Understanding those relationships made it possible to investigate the update media more effectively and informed the development of the maintenance application.
 
-## 7. From Research to a Maintenance Application
+## 7. The ES3Maintenance Application
 
-After investigating the BIOS, memory, storage, registry, and update workflow, the next step was to make routine maintenance more accessible.
+`ES3Maintenance` is a C# Windows Forms utility designed to make common maintenance and diagnostic tasks on the Namco ES3 easier to access from one interface.
 
-The **ES3 Maintenance Toolkit** is the practical application that came out of this work.
+Rather than requiring every task to be performed manually through Windows tools or command-line scripts, the application brings together system status, drive inspection, troubleshooting shortcuts, and maintenance actions.
 
-Instead of requiring every maintenance task to begin with manual investigation or navigation through the original arcade environment, the application provides a dedicated interface for common actions.
+### Application Features
 
-### Application interface
+#### Drive / BitLocker Status
 
-The Windows Forms application includes a maintenance interface with controls such as:
+Runs Windows' built-in `manage-bde -status` command to display BitLocker information for available volumes.
 
-- **Command Prompt** — access to a command-line environment for troubleshooting.
-- **Open Log Folder** — convenient access to the application's logs.
-- **Restart ES3** — a direct way to restart the machine.
-- **System overview** — displays basic information about the computer, current user, operating system, and architecture.
-- **Maintenance output** — displays status and diagnostic information.
+This helps identify:
+- Which volumes are protected by BitLocker.
+- Whether a volume is currently locked or unlocked.
+- The encryption and protection status reported by Windows.
 
-The interface is intended to make the maintenance workflow easier to navigate and provide a central starting point for supported operations.
+This function is intended for **inspection only**. It does not decrypt drives, retrieve encryption keys, or change BitLocker settings.
 
-### Read-only information and actions
+#### VHD Inventory
 
-The application distinguishes between system information and actions that change the machine's state.
+Scans the expected directory for virtual hard disk (`.vhd`) files and lists the files it finds.
 
-System overview and inventory information can be presented without changing the cabinet's configuration. Other actions, such as restarting the machine, have an explicit effect and should be used deliberately.
+This is useful for identifying the virtual disks stored on the ES3, including disk images associated with its software environments. It provides a quick inventory without requiring the user to browse the filesystem manually.
 
-The application does not replace the underlying Windows, storage, or firmware mechanisms. It provides a more convenient interface for working with the system.
+Listing a VHD does not mount it, unlock it, or modify its contents.
+
+#### Open Explorer
+
+Opens Windows File Explorer so the user can browse files and directories, inspect maintenance files, and locate relevant system resources.
+
+#### Command Prompt
+
+Opens a command-line window for maintenance tasks that require direct use of Windows commands or other command-line utilities.
+
+This provides access to the underlying operating system tools without requiring the user to locate and launch the command interpreter separately.
+
+Commands entered here run with the permissions of the account or process context used to launch them.
+
+#### System Information
+
+Provides a shortcut to Windows system information, making it easier to inspect the machine's hardware and operating-system configuration while troubleshooting the ES3.
+
+This is useful when documenting the hardware platform or checking system details before performing maintenance.
+
+#### Network Diagnostics
+
+Runs `ipconfig /all` to display detailed network configuration information, including available network adapters, IP addresses, gateways, and DNS settings.
+
+This is particularly useful when investigating network connectivity, adapter configuration, and communication between the ES3 and external equipment.
+
+The output is diagnostic information; the function does not itself change the network configuration.
+
+#### Maintenance Logging
+
+Writes application activity to:
+
+`%ProgramData%\ES3Maintenance\maintenance.log`
+
+The log provides a persistent record of supported application activity, helping with troubleshooting and documenting what happened during a maintenance session.
+
+The log records only the activity the application is configured to write; it should not be treated as a complete Windows system audit.
+
+#### Restart ES3
+
+Provides a convenient way to restart the machine from the application.
+
+Because restarting interrupts active processes and can cause unsaved work to be lost, the application asks for confirmation before initiating the restart.
+
+This is the main feature in the interface that intentionally causes a system-level change.
+
+### Design Philosophy
+
+The application is intended to make routine diagnostics and maintenance more accessible while keeping potentially disruptive actions distinct from inspection tools.
+
+| Function | Purpose | Changes system state? |
+|---|---|---|
+| Drive / BitLocker Status | Inspect volume protection status | No |
+| VHD Inventory | List available VHD files | No |
+| Open Explorer | Browse files | Not by itself |
+| Command Prompt | Run Windows commands | Depends on commands entered |
+| System Information | Inspect system configuration | No |
+| Network Diagnostics | Inspect network settings | No |
+| Maintenance Logging | Record application activity | Writes a log file |
+| Restart ES3 | Restart the machine | Yes |
+
+### Relationship to the Research
+
+The application grew out of hands-on investigation of the ES3 platform, including BIOS access, memory acquisition, BitLocker analysis, offline drive access, and Windows registry troubleshooting.
+
+Those investigations helped establish the maintenance workflow and the importance of having convenient access to system diagnostics. The application brings selected day-to-day tools into a single interface; it does **not** automatically perform the entire research process.
+
+In particular, the current diagnostic interface should not be described as automatically recovering BIOS passwords, dumping RAM, decrypting BitLocker volumes, extracting encryption keys, or modifying game VHDs unless those capabilities are implemented separately.
+
+The goal is a practical, maintainable utility for inspecting and servicing the Namco ES3 platform without having to remember every command or manually navigate to every Windows utility.
 
 ## Conclusion
 
