@@ -323,9 +323,9 @@ The maintenance application brings that investigation toward a practical result:
 
 The objective is to make the platform easier to understand, troubleshoot, preserve, and maintain.
 
-## How to set up your USB drive, and use the tool
+## How to set up your USB drive, and use the tool (At your own risk!)
 
-!!!As of now, the only way to utilize this tool is by having the real update USB drive!!! 
+!!!As of now, the only way to utilize this tool is by having the real update USB drive!!! (Update drives for Tekken 7 FR show up all the time on Yahoo Japan Auctions)
 
 Note: Update drives are compatible with other games, you just need to change the BitLocker passphrases to the other game's. 
 
