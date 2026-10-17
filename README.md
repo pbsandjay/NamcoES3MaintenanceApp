@@ -3,6 +3,8 @@ Suite of tools useful for finding issues with the Namco ES3 arcade board
 
 # Namco ES3 Maintenance Toolkit
 
+#### CURRENT RELEASE: PoC 0.1 (Initial GitHub repo. Missing: Custom update.ps1 script needed to launch the app on ES3 boot)
+
 A maintenance utility for the Namco ES3 arcade platform, developed through hands-on investigation of its hardware, Windows 7 Embedded environment, boot process, BitLocker-protected storage, and update workflow.
 
 What began as an attempt to understand and regain access to an ES3 system evolved into a dedicated Windows maintenance application that makes common diagnostic and recovery tasks easier to access.
