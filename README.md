@@ -326,7 +326,10 @@ The objective is to make the platform easier to understand, troubleshoot, preser
 ## How to set up your USB drive, and use the tool
 
 !!!As of now, the only way to utilize this tool is by having the real update USB drive!!! 
-Note: Update drives are compatible with other games, you just need to change the BitLocker passphrases from one to the other
+
+Note: Update drives are compatible with other games, you just need to change the BitLocker passphrases to the other game's. 
+
+Unlocking a Time Crisis 5 update drive, and updating the passphrase with Tekken 7's will work.
 
 1. Download the latest release (PoC 0.2 or greater)
 2. Unzip the entire contents onto a safe place on your PC
