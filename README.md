@@ -20,6 +20,8 @@ What began as an attempt to understand and regain access to an ES3 system evolve
 - [5. Offline Windows Registry Editing](#5-offline-windows-registry-editing)
 - [6. Investigating Update USB Drives](#6-investigating-update-usb-drives)
 - [7. The ES3Maintenance Application](#7-the-es3maintenance-application)
+- [8. How to set up your USB drive, and use the tool (At your own risk!)](#8--how-to-set-up-your-usb-drive-and-use-the-tool-at-your-own-risk)
+- [9. FAQ](#9-faq)
 
 ## Project Overview
 
@@ -325,7 +327,7 @@ The maintenance application brings that investigation toward a practical result:
 
 The objective is to make the platform easier to understand, troubleshoot, preserve, and maintain.
 
-## How to set up your USB drive, and use the tool (At your own risk!)
+## 8.  How to set up your USB drive, and use the tool (At your own risk!)
 
 #### !!!As of now, the only way to utilize this tool is by having the real update USB drive!!! (Update drives for Tekken 7 FR show up all the time on Yahoo Japan Auctions)
 
@@ -343,7 +345,7 @@ Note: Update drives are compatible with other games, you just need to change the
 8. Let it continue through the normal booting process
 9. Once it sees the USB drive, it'll attempt to update the game. Instead of trying to find and copy the update VHD, it'll launch the ES3 Maintenance App
 
-## FAQ
+## 9. FAQ
 
 #### I changed the passphrase from Game A to Game B, now I can't unlock it/ES3 doesn't see the update drive!
 
