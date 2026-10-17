@@ -357,4 +357,4 @@ I mean, it can be. But I'll leave it up to you what you want to use this tool fo
 
 #### Why can't I use a standard USB drive that I have stashed in my desk?
 
-That's something I'm currently looking into, but during my initial testing, it wouldn't load either the custom update.ps1 script or the ES3 app. So pretty safe to assume, for now, that it's looking for a specific USB VID/PID. 
+That's something I'm currently looking into, but during my initial testing with bog-standard USB drive, it wouldn't load either the custom update.ps1 script or the ES3 app. So pretty safe to assume, for now, that it's looking for a specific USB VID/PID. 
