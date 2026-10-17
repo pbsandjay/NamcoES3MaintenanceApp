@@ -330,5 +330,5 @@ The objective is to make the platform easier to understand, troubleshoot, preser
 5. Copy the contents of what you unzipped earlier and drop them onto the root of your USB drive
 6. Unplug the USB from your PC, and plug it into a powered-off ES3
 7. Turn on the ES3
-8. It'll continue through the normal booting process
-9. It'll look for an update, and instead of trying to find and copy the update VHD, it'll launch the ES3 Maintenance App
+8. Let it continue through the normal booting process
+9. Once it sees the USB drive, it'll attempt to update the game. Instead of trying to find and copy the update VHD, it'll launch the ES3 Maintenance App
